@@ -12,12 +12,14 @@
             background-attachment: fixed;
             background-size: cover;
             margin: 0;
-            padding: 0
+            padding: 0;
+            position: relative;
         }
 
         header {
             text-align: center
         }
+
         h1 {
             color: black;
             display: inline-block;
@@ -42,6 +44,14 @@
         #fire:hover,
         .wind:hover {
             animation-duration: 0.1s
+        }
+
+        #audio {
+            margin: 2em;
+            font-weight: bold;
+            border: 5px black double;
+            border-radius: 40%;
+            position: fixed;
         }
 
         @keyframes fire_effect {
@@ -75,15 +85,18 @@
 
 <body>
 
-    <audio autoplay>
+    <audio id="audio" controls>
+        <p>Play me for music</p>
         <source src="assets/calmMusic.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-      </audio>
+        Your browser does not support the audio element.
+    </audio>
 
     <header>
-        <a href="redirect.html"><h1>Welcome to a peace of mind</h1></a>
+        <a href="redirect.html">
+            <h1>Welcome to a peace of mind</h1>
+        </a>
     </header>
-    
+
     <svg width="1704" height="862" viewBox="0 0 1704 862" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="tree_3" class="wind tree" filter="url(#filter0_d)">
             <path id="path5940"
